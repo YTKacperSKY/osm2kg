@@ -28,7 +28,7 @@ create table osmlinks.linkingexperiment_folds
 (
   experiment integer not null
     constraint linkingexperiment_folds_experiment_fkey
-      references linkingexperiment,
+      references osmlinks.linkingexperiment,
   fold       integer not null,
   correct    integer,
   incorrect  integer,
@@ -54,7 +54,7 @@ create table osmlinks.candidates
   constraint candidates_pkey
     primary key (experiment, fold, osmid, kgid),
   constraint candidates_experiment_fkey
-    foreign key (experiment, fold) references linkingexperiment_folds
+    foreign key (experiment, fold) references osmlinks.linkingexperiment_folds
 );
 
 
@@ -81,7 +81,7 @@ create table osmlinks.classification_results
   constraint classification_results_pkey
     primary key (experiment, fold),
   constraint classification_results_experiment_fkey
-    foreign key (experiment, fold) references linkingexperiment_folds
+    foreign key (experiment, fold) references osmlinks.linkingexperiment_folds
 );
 
 create table osmlinks.wikidata

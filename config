@@ -1,5 +1,5 @@
-dbHost=
-dbUser=
+dbHost=localhost
+dbUser=postgres
 dbPassword=
 dbName=
 dbMaxConnections=1
@@ -14,7 +14,7 @@ geoThreshold=2500
 classifier=dtree
 MLModelPath=
 NoFolds=10
-pythonCmd=python
+pythonCmd=python3
 features=types,distance,osm_embedding,statement_coun
 featurePath=
 
